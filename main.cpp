@@ -182,6 +182,7 @@ public:
       for (int c = 0; c < 4; c++) {
         int idx = r * 4 + c;
         char status = seatOccupied[idx] ? 'X' : 'O'; // checks the status of the seat (occupied or not)
+        // ternary makes it shorter and way faster i love it
         cout << row << (char)('A' + c) << " " << status;
         if (c == 1)
           cout << " | |";
